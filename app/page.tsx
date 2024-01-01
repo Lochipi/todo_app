@@ -4,8 +4,6 @@ export default function Home() {
   return (
     <div>
       <TopicsList />
-      <TopicsList />
-      <TopicsList />
     </div>
   );
 }
