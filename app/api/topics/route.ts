@@ -17,3 +17,30 @@ export async function POST(request: any) {
     // return the response
     return NextResponse.json({message: "Topic created successfully!"}, {status: 201});
 }
+
+
+export async function GET(){
+    // connect to the database
+    await connectMongoDB();
+
+    // get all topics
+    const topics = await Topic.find({});
+
+    // return the response
+    return NextResponse.json(topics, {status: 200});
+}
+
+
+export async function DELETE(request: any){
+    // get the id from the request body
+    const id = request.nextUrl.searchParams.get("id");
+
+    // connect to the database
+    await connectMongoDB();
+
+    // delete the topic
+    await Topic.findByIdAndDelete(id);
+
+    // return the response
+    return NextResponse.json({message: "Topic deleted successfully!"}, {status: 200});
+}
