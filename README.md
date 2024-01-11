@@ -1,6 +1,10 @@
 # Crud app
 This is a simple crud app that uses nextjs, Typescript, MongoDB to store data. It also uses TailwindCSS for styling.
 
+## Tech stack used
+- __NextJs__
+- __React__
+- __MongoDB__
 ## Getting Started
 
 First, run the development server:
